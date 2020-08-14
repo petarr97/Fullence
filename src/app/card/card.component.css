@@ -1,0 +1,33 @@
+.about {
+  color           : blue;
+  font-size       : 150px;
+  font            : italic;
+  background-color: blanchedalmond;
+  position        : center;
+
+}
+
+.klasa {
+  display     : block;
+  margin-left : auto;
+  margin-right: auto;
+  width       : 40%;
+}
+
+.example-card1,
+.example-card2,
+.example-card3,
+.example-card4,
+.example-card {
+  max-width : 400px;
+  position  : center;
+  text-align: center;
+  align-self: center;
+}
+
+.example-header-image {
+
+  background-image: url('/assets/img/edit-logo.png');
+  background-size : auto;
+
+}

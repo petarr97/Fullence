@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:200,300,400,600");
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 100px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36pt;
+  font-weight: bold;
+  color: rgb(190, 67, 67);
+  margin-bottom: 25px;
+}
+
+.team {
+  text-align: center;
+  font-size: 26pt;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+  color: #151e3f;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.wrapper {
+  margin-top: 10px;
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  > * {
+    margin: 5px;
+  }
+}
+
+.nameDiv {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16pt;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.media {
+  border-radius: 5%;
+  filter: grayscale(70%);
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+img {
+  min-width: 500px;
+}
+.layer {
+  opacity: 0;
+  border-radius: 3%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 90%;
+  background: #fff;
+  color: #151e3f;
+  transition: all 0.9s ease;
+  p {
+    transition: all 0.9s ease;
+    transform: scale(0.1);
+  }
+}
+
+p {
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.media:hover .layer {
+  opacity: 0.8;
+  width: 90%;
+  transition: all 0.5s ease;
+  p {
+    transform: scale(1);
+    transition: all 0.9s ease;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: block;
+    > * {
+      margin: 10px;
+    }
+  }
+}

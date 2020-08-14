@@ -1,0 +1,44 @@
+<div id="overlay" *ngIf="showDeleteModal">
+  <div style="width: 300px; height: 300px;" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 style="font-size: 20px;" class="modal-title">
+          Are you sure you want to delete this job?
+        </h5>
+      </div>
+      <div style="align-items: center; text-align: center;" class="modal-body p-4">
+        <button style="width: 100px;" class="btn btn-primary" (click)="onYes()">
+          Yes
+        </button>
+        <button (click)="onNo()" style="width: 100px; margin-left: 20px;" class="btn btn-info">
+          No
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="width: 30rem;">
+  <img height="250" [src]="job.imagePath" />
+  <div class="card-body">
+    <h5 class="card-title">{{job.title}}</h5>
+    <h6 style="font-size: 13px;" class="card-subtitle mb-2 text-muted">Job Type: {{job.jobType}}</h6>
+    <p class="card-text">{{job.description}}</p>
+
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Company: {{job.firm}}</li>
+    <li class="list-group-item">About company: {{job.companyInfo}}</li>
+    <li class="list-group-item">Location: {{job.location}}</li>
+  </ul>
+  <div class="card-elma" *ngIf="userIsAuthenticated && userId === job.creator">
+    <button class="btn btnEdit" mat-fab color="primary" aria-label="Example icon button with a delete icon"
+      [routerLink]="['/edit', job.id]">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button class="btn btn-dele" mat-fab color="accent" aria-label="Example icon button with a delete icon"
+      (click)="onDelete(job.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

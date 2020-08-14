@@ -1,0 +1,78 @@
+<!--Ako imamo ijedan post-->
+<div class="container">
+
+  <div class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-8">
+    <input class="form-control form-control-sm mr-6 w-100" type="text" placeholder="Search by title..." aria-label="Search"[(ngModel)] = "search">
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <div class="dugmad">
+
+    <mat-slide-toggle
+    *ngIf="userIsAuthenticated" (click)="onMyJobs()">My Jobs</mat-slide-toggle>
+      <mat-form-field appearance="fill">
+
+        <mat-label>All locations</mat-label>
+
+        <mat-select style="color: blue;">
+          <mat-option (click)="resetLocation()">None</mat-option>
+          <mat-option (click)="setLocFilter(loc.location)" *ngFor="let loc of locations" [value]="loc.location">
+            {{loc.location}}
+
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+        <mat-form-field style="margin-left:10px;" appearance="fill">
+          <mat-label>All jobs</mat-label>
+          <mat-select>
+            <mat-option (click)="resetJobType()">None</mat-option>
+            <mat-option (click)="setJobFilter(jobtype.jobType)" *ngFor="let jobtype of jobTypes" [value]="jobtype.jobType">
+              {{jobtype.jobType}}
+
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+
+    <br />
+</div>
+
+<div class="dva">
+  <div class="row justify-content-start">
+
+    <ng-container class="klasa" *ngFor="
+        let job of jobs
+          | filter: filterLocation:'location':filterJobType:'jobType':search:'title'
+      ">
+      <ng-container *ngIf="!userIsAuthenticated  || !myJobs || userId === job.creator">
+      <div class="card mb-3" style="max-width: 700px; max-height: 300px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img height="250" [src]="job.imagePath" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+
+              <h5 class="textLabel">{{ job.title }}</h5>
+              <p class="card-text"><small class="text-muted">{{job.jobType }} </small></p><br />
+              <p class="card-text">{{ job.descSubstring }}</p>
+
+            </div>
+            <div class="buttonDiv">
+              <button [routerLink]="['/showMore', job.id]" class="btn btn-primary">
+                Show More
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  </div>
+</div>

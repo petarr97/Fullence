@@ -1,0 +1,193 @@
+.job-image {
+  max-height: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 5%;
+}
+img {
+  width: 100%;
+}
+
+.btn-primary {
+  -webkit-appearance:  none;
+  width:  auto;
+  float: right;
+  min-width:  100px;
+  border-radius:  24px;
+  text-align:  center;
+  padding:  15px 40px;
+  margin-top:  5px;
+  background-color:  #ff4081;
+  color:  #fff;
+  font-size:  14px;
+  margin-left:  auto;
+  font-weight:  500;
+  box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13);
+  border:  none;
+  transition:  all .3s ease;
+  outline: 0;
+}
+.descripTionDiv {
+  width: 70%;
+  height: 300px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-slide-toggle{
+  margin-bottom: 20px!important;
+
+}
+.h5, h5{
+  font-size: 15px!important;
+}
+
+.mat-form-field {
+  display:inline;
+  position: relative;
+  text-align: left;
+}
+@media only screen and (max-width: 980px) {
+  .dugmad {
+    display:block;
+    float: none!important;
+  }
+  .mat-slide-toggle{
+    margin-right: 50px!important;
+
+  }
+
+  .mat-form-field {
+    display:inline-block!important;
+
+  }
+}
+
+@media only screen and (max-width: 780px) {
+
+  .card.mb-3.ng-star-inserted {
+    max-height: 1000px!important;
+  }
+  .dugmad {
+    display:inline-grid!important;
+    float: none!important;
+  }
+
+  .card-body{
+    min-height: 350px;
+  }
+}
+
+.dugmad{
+
+  max-width: 700px;
+  margin: 0 auto;
+  float:left;
+  position:relative;
+
+}
+.buttonDiv {
+  position: absolute;
+  bottom: 0;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  right: 0;
+}
+.jobDescription {
+  margin-top: 10px;
+  text-align: center;
+}
+.col-md-3 {
+  text-align: center;
+  background-color: #99e6ff;
+  border-radius: 5%;
+  margin-left: 5px;
+  margin-right: 20px;
+  width: 200px;
+  height: 500px;
+  margin-top: 30px;
+  border: 2px solid black;
+}
+.textLabel {
+  margin-top: 5px;
+  word-break: break-all;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+}
+.card.mb-3.ng-star-inserted {
+  margin: auto;
+  box-shadow: 5px 10px 18px #888888;
+  max-width: 800px!important;
+}
+
+.card-body{
+  min-width: 500px;
+
+}
+.row justify-content-start{
+  display: block;
+}
+
+
+label {
+  color: black;
+}
+a {
+  margin-bottom: 5px;
+}
+.container {
+  border-radius: .5%;
+  margin-top: 100px;
+  background-color: white;
+  box-shadow: 5px 10px 18px #888888;
+  min-height: 500px;
+}
+
+.klasa{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-control-sm {
+ height: calc(1.9rem + .6rem + 2px);
+ margin-top: 15px;
+
+ min-width:  100px;
+ border-radius:  24px;
+ padding-left: 40px;
+ font-size:  14px;
+ margin-left:  auto;
+
+ box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13);
+ border:  none;
+ transition:  all .3s ease;
+ outline: 0;
+ border-bottom: 1px solid #3f51b5;
+ color: #3f51b5;
+  box-shadow: 0 1px 0 0 #3f51b5;
+
+}
+
+
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #3f51b5;
+  box-shadow: 0 1px 0 0 #3f51b5;
+}
+
+.active-cyan input.form-control[type=text] {
+  border-bottom: 1px solid #3f51b5;
+  box-shadow: 0 1px 0 0 #3f51b5;
+}
+.active-cyan .fa, .active-cyan-2 .fa {
+  color: #3f51b5;
+}

@@ -1,0 +1,28 @@
+<div class="mainWrapper">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <div class="container">
+        <div class="session">
+            <div class="left">
+            </div>
+            <form action="" class="log-in" (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+                <h4> <span>Fullence Job Board</span></h4>
+                <p class="text">Welcome back! Log in to your account to edit your job posts:</p>
+                <div class="floating-label">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <input placeholder="Email" type="email" ngModel name="email" id="email" #emailInput="ngModel"
+                        required email>
+                    <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+                </div>
+                <div class="floating-label">
+                    <i class="glyphicon glyphicon-lock"></i>
+                    <input placeholder="Password" ngModel type="password" name="password" id="password"
+                        #passwordInput="ngModel" required>
+                </div>
+                <div class="wrapper">
+                    <button type="submit" class="logIn" *ngIf="!isLoading">Log in</button>
+                    <a class="sgnUp" *ngIf="!isLoading" routerLink="/signup" routerLinkActive="mat-accent">Sign Up?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

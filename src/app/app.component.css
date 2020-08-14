@@ -1,0 +1,51 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.Naziv {
+  font-size  : 20px;
+  font-weight: bold;
+}
+
+main {
+  width : 80%;
+  margin: 1rem auto;
+}
+
+body {
+
+  background-color: #eceae5 !important;
+}
+
+.toolbar {
+  color           : #1256b0 !important;
+  box-shadow      : 1px 1px 30px #1256b0;
+  background-color: Rgba(255, 255, 255, 0.7) !important;
+
+}
+
+.logo-image {
+  background-color: white;
+  align-items     : center;
+
+
+  width           : 300px;
+  float           : left;
+  min-width       : 100px;
+  border-radius   : 24px;
+  text-align      : center;
+  background-color: white;
+  color           : #fff;
+  font-size       : 14px;
+  margin-left     : auto;
+  font-weight     : 800;
+  box-shadow      : 0px 2px 6px -1px rgba(0, 0, 0, .13);
+  border          : none;
+  transition      : all .3s ease;
+  outline         : 0;
+}
+
+a {
+  color: #1256b0 !important;
+
+}
